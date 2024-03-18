@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projeto_filmes.filmes.mulhermara"
+    BackgroundColor="#2f2f30">
+
+    <StackLayout Orientation="Vertical">
+        <Image x:Name="logo" Style="{StaticResource LogoNoFilme }" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <WebView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+              x:Name="visuzalizador"
+              VerticalOptions="FillAndExpand"
+              BackgroundColor="#2f2f30" />
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                <ScrollView>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="300"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image x:Name="hp.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" />
+                        <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+                            <Label Text="TÍTULO " Style="{StaticResource LabelTextoVermelho }" />
+                            <Label Text="Mulher Maravilha" Style="{StaticResource LabelTextoBranco }" />
+                            <Label Text="ANO DE LANÇAMENTO" Style="{StaticResource LabelTextoVermelho }" />
+                            <Label Text=" 17 de dezembro de 2020" Style="{StaticResource LabelTextoBranco }" />
+                            <Label Text="DIREÇÃO" Style="{StaticResource LabelTextoVermelho }" />
+                            <Label Text="Patty Jenkins" Style="{StaticResource LabelTextoBranco }" />
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Padding="10">
+                            <Label Text="SINOPSE" Style="{StaticResource LabelTextoVermelho }" />
+                            <Label x:Name="Mulher-Maravilha 1984 acompanha Diana Prince/Mulher-Maravilha (Gal Gadot) em 1984, durante a Guerra Fria, entrando em conflito com dois grande inimigos - o empresário de mídia Maxwell Lord (Pedro Pascal) e a amiga que virou inimiga Barbara Minerva/Cheetah (Kristen Wiig) - enquanto se reúne com seu interesse amoroso Steve Trevor (Chris Pine)" Style="{StaticResource LabelTextoBranco}" />
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

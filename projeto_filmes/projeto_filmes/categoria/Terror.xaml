@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projeto_filmes.categoria.Terror"
+             BackgroundColor="#2f2f30">
+
+    <StackLayout Orientation="Vertical">
+        <Image x:Name="logo" Style="{StaticResource LogoNaListaDePosters }"/>
+        <Label Text="TERROR" Style="{StaticResource LabelTextoVermelho }" />
+        <ScrollView>
+            <Grid Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="300"/>
+                </Grid.RowDefinitions>
+
+                <ImageButton Grid.Row="0" Grid.Column="0"
+                x:Name="btnit"
+                Style="{StaticResource ButtonPosters }"
+                Clicked="Btn_Open_it" />
+
+                <ImageButton Grid.Row="0" Grid.Column="1"
+                x:Name="btnpearl"
+                Style="{StaticResource ButtonPosters }" Clicked="Btn_Open_pearl" />
+
+                <ImageButton Grid.Row="1" Grid.Column="0"
+                x:Name="btndemonio"
+                Style="{StaticResource ButtonPosters }"
+                Clicked="Btn_Open_demonio" />
+            </Grid>
+
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
